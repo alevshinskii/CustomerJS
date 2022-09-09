@@ -1,5 +1,5 @@
 /* eslint-disable no-undef */
-const Address = require('../../src/Entities/Address')
+import Address from '../../src/Entities/Address'
 
 const address = new Address()
 test('Should be able to create Address', () => {
@@ -24,6 +24,11 @@ test('Should be able to get/set addressType', () => {
 address.city = 'City'
 test('Should be able to get/set city', () => {
     expect(address.city).toBe('City')
+})
+
+address.postalCode = '123456'
+test('Should be able to get/set postalCode', () => {
+    expect(address.postalCode).toBe('123456')
 })
 
 address.state = 'State'

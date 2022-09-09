@@ -21,5 +21,4 @@ class Person {
     }
 }
 
-// eslint-disable-next-line no-undef
-module.exports = Person
+export default Person

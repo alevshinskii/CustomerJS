@@ -1,18 +1,11 @@
-// eslint-disable-next-line no-undef
-const Person = require('./Person')
+import Person from './Person'
 
 class Customer extends Person {
     constructor() {
         super()
-        this.#addresses = []
-        this.#phoneNumber = null
-        this.#email = null
-        this.#notes = []
-        this.totalPurchasesAmount = null
-        this.lastPurchaseDate = null
     }
 
-    #addresses
+    #addresses = []
     get addresses() {
         return this.#addresses
     }
@@ -20,7 +13,7 @@ class Customer extends Person {
         this.#addresses = value
     }
 
-    #phoneNumber
+    #phoneNumber = null
     get phoneNumber() {
         return this.#phoneNumber
     }
@@ -28,7 +21,7 @@ class Customer extends Person {
         this.#phoneNumber = value
     }
 
-    #email
+    #email = null
     get email() {
         return this.#email
     }
@@ -36,7 +29,7 @@ class Customer extends Person {
         this.#email = value
     }
 
-    #notes
+    #notes = []
     get notes() {
         return this.#notes
     }
@@ -44,7 +37,7 @@ class Customer extends Person {
         this.#notes = value
     }
 
-    #totalPurchasesAmount
+    #totalPurchasesAmount = null
     get totalPurchasesAmount() {
         return this.#totalPurchasesAmount
     }
@@ -52,7 +45,7 @@ class Customer extends Person {
         this.#totalPurchasesAmount = value
     }
 
-    #lastPurchaseDate
+    #lastPurchaseDate = null
     get lastPurchaseDate() {
         return this.#lastPurchaseDate
     }
@@ -61,5 +54,4 @@ class Customer extends Person {
     }
 }
 
-// eslint-disable-next-line no-undef
-module.exports = Customer
+export default Customer

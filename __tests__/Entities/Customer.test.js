@@ -1,6 +1,6 @@
 /* eslint-disable no-undef */
-const Customer = require('../../src/Entities/Customer')
-const Address = require('../../src/Entities/Address')
+import Customer from '../../src/Entities/Customer'
+import Address from '../../src/Entities/Address'
 
 const customer = new Customer()
 

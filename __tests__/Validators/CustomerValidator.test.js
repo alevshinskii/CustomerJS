@@ -82,9 +82,7 @@ test('Should be able to validate phoneNumber field', () => {
 })
 
 test('Should be able to validate correct email field', () => {
-    const invalidCustomer = validCustomer
-    invalidCustomer.phoneNumber = Random.RegexString(/\w+@\w+.\w+/)
-    expect(CustomerValidator.Validate(invalidCustomer)).not.toContain(
+    expect(CustomerValidator.Validate(validCustomer.email)).not.toContain(
         'email is not valid'
     )
 })
@@ -98,11 +96,11 @@ test('Should be able to validate incorrect email field', () => {
 })
 
 test('Should be able to validate notes', () => {
-    const invalidCustomer = validCustomer
-    expect(CustomerValidator.Validate(invalidCustomer)).not.toContain(
+    expect(CustomerValidator.Validate(validCustomer)).not.toContain(
         'notes list should contain at least 1 note'
     )
 
+    const invalidCustomer = validCustomer
     invalidCustomer.notes = []
     expect(CustomerValidator.Validate(invalidCustomer)).toContain(
         'notes list should contain at least 1 note'

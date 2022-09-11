@@ -1,57 +1,69 @@
-import Person from './Person'
+import Person from './Person';
 
 class Customer extends Person {
-    constructor() {
-        super()
-    }
+  constructor() {
+    super();
+  }
 
-    #addresses = []
-    get addresses() {
-        return this.#addresses
-    }
-    set addresses(value) {
-        this.#addresses = value
-    }
+  #addresses = [];
 
-    #phoneNumber = null
-    get phoneNumber() {
-        return this.#phoneNumber
-    }
-    set phoneNumber(value) {
-        this.#phoneNumber = value
-    }
+  get addresses() {
+    return this.#addresses;
+  }
 
-    #email = null
-    get email() {
-        return this.#email
-    }
-    set email(value) {
-        this.#email = value
-    }
+  set addresses(value) {
+    this.#addresses = value;
+  }
 
-    #notes = []
-    get notes() {
-        return this.#notes
-    }
-    set notes(value) {
-        this.#notes = value
-    }
+  #phoneNumber = null;
 
-    #totalPurchasesAmount = null
-    get totalPurchasesAmount() {
-        return this.#totalPurchasesAmount
-    }
-    set totalPurchasesAmount(value) {
-        this.#totalPurchasesAmount = value
-    }
+  get phoneNumber() {
+    return this.#phoneNumber;
+  }
 
-    #lastPurchaseDate = null
-    get lastPurchaseDate() {
-        return this.#lastPurchaseDate
-    }
-    set lastPurchaseDate(value) {
-        this.#lastPurchaseDate = value
-    }
+  set phoneNumber(value) {
+    this.#phoneNumber = value;
+  }
+
+  #email = null;
+
+  get email() {
+    return this.#email;
+  }
+
+  set email(value) {
+    this.#email = value;
+  }
+
+  #notes = [];
+
+  get notes() {
+    return this.#notes;
+  }
+
+  set notes(value) {
+    this.#notes = value;
+  }
+
+  #totalPurchasesAmount = null;
+
+  get totalPurchasesAmount() {
+    return this.#totalPurchasesAmount;
+  }
+
+  set totalPurchasesAmount(value) {
+    this.#totalPurchasesAmount = value;
+  }
+
+  #lastPurchaseDate = null;
+
+  get lastPurchaseDate() {
+    return this.#lastPurchaseDate;
+  }
+
+  set lastPurchaseDate(value) {
+    this.#lastPurchaseDate = value;
+  }
 }
 
-export default Customer
+export default Customer;

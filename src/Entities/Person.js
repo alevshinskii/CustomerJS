@@ -1,24 +1,28 @@
 class Person {
-    constructor() {
-        this.firstName = null
-        this.lastName = null
-    }
+  constructor() {
+    this.firstName = null;
+    this.lastName = null;
+  }
 
-    #firstName
-    get firstName() {
-        return this.#firstName
-    }
-    set firstName(value) {
-        this.#firstName = value
-    }
+  #firstName;
 
-    #lastName
-    get lastName() {
-        return this.#lastName
-    }
-    set lastName(value) {
-        this.#lastName = value
-    }
+  get firstName() {
+    return this.#firstName;
+  }
+
+  set firstName(value) {
+    this.#firstName = value;
+  }
+
+  #lastName;
+
+  get lastName() {
+    return this.#lastName;
+  }
+
+  set lastName(value) {
+    this.#lastName = value;
+  }
 }
 
-export default Person
+export default Person;

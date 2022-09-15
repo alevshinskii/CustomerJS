@@ -1,12 +1,12 @@
 class Address {
   constructor() {
-    this.addressLine = String.empty;
-    this.addressLine2 = null;
-    this.addressType = 0;
-    this.city = String.empty;
-    this.postalCode = String.empty;
-    this.state = String.empty;
-    this.country = String.empty;
+    this.addressLine;
+    this.addressLine2;
+    this.addressType;
+    this.city;
+    this.postalCode;
+    this.state;
+    this.country;
   }
 
   #addressLine;
@@ -16,7 +16,13 @@ class Address {
   }
 
   set addressLine(value) {
-    this.#addressLine = value;
+    if (typeof value === 'string' || value == null) {
+      this.#addressLine = value;
+      return;
+    }
+    throw new TypeError(
+      'invalid type tried to set in addressLine, actual: ' + typeof value,
+    );
   }
 
   #addressLine2;
@@ -26,7 +32,13 @@ class Address {
   }
 
   set addressLine2(value) {
-    this.#addressLine2 = value;
+    if (typeof value === 'string' || value == null) {
+      this.#addressLine2 = value;
+      return;
+    }
+    throw new TypeError(
+      'invalid type tried to set in addressLine2, actual: ' + typeof value,
+    );
   }
 
   #addressType;
@@ -36,7 +48,13 @@ class Address {
   }
 
   set addressType(value) {
-    this.#addressType = value;
+    if (typeof value === 'number' || value == null) {
+      this.#addressType = value;
+      return;
+    }
+    throw new TypeError(
+      'invalid type tried to set in addressType, actual: ' + typeof value,
+    );
   }
 
   #city;
@@ -46,7 +64,13 @@ class Address {
   }
 
   set city(value) {
-    this.#city = value;
+    if (typeof value === 'string' || value == null) {
+      this.#city = value;
+      return;
+    }
+    throw new TypeError(
+      'invalid type tried to set in city, actual: ' + typeof value,
+    );
   }
 
   #postalCode;
@@ -56,7 +80,13 @@ class Address {
   }
 
   set postalCode(value) {
-    this.#postalCode = value;
+    if (typeof value === 'string' || value == null) {
+      this.#postalCode = value;
+      return;
+    }
+    throw new TypeError(
+      'invalid type tried to set in postalCode, actual: ' + typeof value,
+    );
   }
 
   #state;
@@ -66,7 +96,13 @@ class Address {
   }
 
   set state(value) {
-    this.#state = value;
+    if (typeof value === 'string' || value == null) {
+      this.#state = value;
+      return;
+    }
+    throw new TypeError(
+      'invalid type tried to set in state, actual: ' + typeof value,
+    );
   }
 
   #country;
@@ -76,7 +112,13 @@ class Address {
   }
 
   set country(value) {
-    this.#country = value;
+    if (typeof value === 'string' || value == null) {
+      this.#country = value;
+      return;
+    }
+    throw new TypeError(
+      'invalid type tried to set in country, actual: ' + typeof value,
+    );
   }
 }
 

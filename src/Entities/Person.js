@@ -11,7 +11,13 @@ class Person {
   }
 
   set firstName(value) {
-    this.#firstName = value;
+    if (typeof value === 'string' || value == null) {
+      this.#firstName = value;
+      return;
+    }
+    throw new TypeError(
+      'invalid type tried to set in firstName, actual: ' + typeof value,
+    );
   }
 
   #lastName;
@@ -21,7 +27,13 @@ class Person {
   }
 
   set lastName(value) {
-    this.#lastName = value;
+    if (typeof value === 'string' || value == null) {
+      this.#lastName = value;
+      return;
+    }
+    throw new TypeError(
+      'invalid type tried to set in lastName, actual: ' + typeof value,
+    );
   }
 }
 
